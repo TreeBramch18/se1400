@@ -1,0 +1,100 @@
+#while(True):
+#    userInput = input("Premutations(p) or Combinations(c)\r\n");
+#    if(userInput.lower() in "permutations"):
+ #       input("Input number to P\r\n")
+#
+ #       quit()
+  #  elif(userInput.lower() in "combinations"):
+   #     input("Input number to C\r\n")
+    #    quit()
+    #else:
+     #   print("Input invalid try agian")
+
+
+def next_permutation(arr):
+    i = len(arr) - 2
+    while i >= 0 and arr[i] >= arr[i + 1]:
+        i -= 1
+    if i < 0:
+        return False
+    
+    j = len(arr) - 1
+    while arr[j] <= arr[i]:
+        j -= 1
+
+    temp = arr[i]
+    arr[i] = arr[j]
+    arr[j] = temp
+
+    arr[i + 1:] = reversed(arr[i + 1:])
+
+    return True
+
+def next_combination(comb, n, r):
+    i = r - 1
+    while i >= 0 and comb[i] == i + (n - r):
+        i -= 1
+
+    if i < 0:
+        return False
+
+    comb[i] += 1
+
+    for j in range(i + 1, r):
+        comb[j] = comb[j - 1] + 1
+
+    return True
+
+
+def generate_combinations(n, r):
+    comb = list(range(r))
+
+    print("".join(map(str, comb)))
+
+    while next_combination(comb, n, r):
+        print("".join(map(str, comb)))
+
+def generate_permutations(n):
+    arr = list(range(n))
+    
+    print("".join(map(str, arr)))
+
+    while next_permutation(arr):
+        print("".join(map(str, arr)))
+
+
+
+def main():
+    while True:
+        userInput = input("Premutations(p) or Combinations(c)\r\n");
+        userNum = 0;
+        if(userInput.lower() in "permutations"):
+            while(True):
+                userNum = input("Input number to P between 1-9\r\n")
+                userNum = int(userNum)
+                if(userNum > 0 and userNum < 10):
+                    generate_permutations(userNum)
+                    quit()
+                else:
+                    print("Invalid number")
+                break
+        elif(userInput.lower() in "combinations"):
+            while(True):
+                donuts = input("Input number of donuts\r\n")
+                choices = input("Input number of choices\r\n")
+                donuts = int(donuts)
+                choices = int(choices)
+                if(donuts > 0 and choices > 0 and donuts >= choices and donuts < 10):
+                    generate_combinations(donuts, choices)
+                    quit()
+                else:
+                    print("Invalid number")
+                break
+        else:
+            print("Input invalid try agian")
+    
+    
+
+
+if __name__ == "__main__":
+    main()
