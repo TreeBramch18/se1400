@@ -47,11 +47,12 @@ body {
 }
 
 #console img {
-    width: 100%;
+    width: 50%;
     height: 100%;
     object-fit: cover;
     object-position: center;
     display: block;
+    padding-left: 24%;
     opacity: .7;
 }
 
