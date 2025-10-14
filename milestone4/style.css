@@ -59,8 +59,33 @@ body {
 main { 
     grid-column: 2 / 8; 
     background: #D3D3D3; 
-    height: 38rem/*600px; */
+    height: 40rem;/*600px; so each 10px is about .6rem*/
+    color: rgb(10, 10, 10);
+    font-size: 25px;
 }
+
+#GameImage {
+    float: left;
+    width: 20%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.3rem;
+    padding: 2rem
+}
+
+#TTRPGImage {
+    float: right;
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.3rem;
+    padding: 2rem
+}
+
+main p {
+  text-indent: 2rem;
+}
+
 
 footer { 
     grid-column: 1 / -1; 
