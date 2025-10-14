@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Island+Moments&display=swap'); /*Got help with Chat GPT for this*/
 #wrapper {
     display: grid;
     grid-template-columns: minmax(0px, 1fr) repeat(6, minmax(0, 175px)) minmax(0px, 1fr);
@@ -7,8 +7,40 @@
 
 header { 
     grid-column: 1 / -1; 
-    background: rgba(255, 0, 0, 0.3); 
+    background: rgba(6, 6, 6, 0.7); 
     height: 80px; 
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    position: sticky;
+    top:0;
+    z-index: 10;
+    
+}
+
+nav p{
+    font-size: 3.5rem;
+    font-weight:lighter ;
+    font-family: 'Island Moments', cursive;
+    transform: rotate(20deg);
+    color: #FFFFFF;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+    width: 150%;
+
+    color:#FFFFFF;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 #console { 
