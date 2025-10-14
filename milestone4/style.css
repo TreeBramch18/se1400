@@ -1,0 +1,30 @@
+
+#wrapper {
+    display: grid;
+    grid-template-columns: minmax(0px, 1fr) repeat(6, minmax(0, 175px)) minmax(0px, 1fr);
+}
+
+
+header { 
+    grid-column: 1 / -1; 
+    background: rgba(255, 0, 0, 0.3); 
+    height: 80px; 
+}
+
+#console { 
+    grid-column: 1 / -1; 
+    background: rgba(0, 255, 85, 0.3); 
+    height: 300px; 
+}
+
+main { 
+    grid-column: 2 / 8; 
+    background: rgba(0, 0, 255, 0.3); 
+    height: 600px; 
+}
+
+footer { 
+    grid-column: 1 / -1; 
+    background: rgba(255, 255, 0, 0.3); 
+    height: 60px; 
+}
