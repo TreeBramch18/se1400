@@ -14,10 +14,6 @@ nav {
     display: flex;
     align-items: center;
     padding: 10px 20px;
-    position: sticky;
-    top:0;
-    z-index: 10;
-    
 }
 
 .logo {
@@ -40,6 +36,7 @@ nav ul {
 
     color:#FFFFFF;
     font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
 }
 
 #console { 
