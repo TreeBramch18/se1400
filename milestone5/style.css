@@ -173,7 +173,6 @@ footer p {
     }
 
     #console {
-        grid-column: 1 / -1;
         background: #D3D3D3;
         height: auto;
     }
@@ -198,6 +197,10 @@ footer p {
         margin-top: 0px;
     }
 
+    nav {
+        margin-top: 0%;
+    }
+
     nav ul {
         font-size: larger;
     }
@@ -219,20 +222,21 @@ footer p {
     }
 
     #GameImage {
-        float: left;
-        width: 20%;
+        float: none;
+        width: auto;
         height: auto;
         object-fit: cover;
-        border-radius: 0.3rem;
-        padding: 2rem
+        border-radius: 3rem;
+        padding-bottom: 2rem;
+
     }
 
     #TTRPGImage {
-        float: right;
-        width: 40%;
+        float: none;
+        width: auto;
         height: auto;
         object-fit: cover;
-        border-radius: 0.3rem;
-        padding: 2rem
+        border-radius: 3rem;
+        padding-bottom: 2rem;
     }
 }
