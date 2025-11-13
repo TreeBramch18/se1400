@@ -13,6 +13,7 @@ header {
     background: rgba(6, 6, 6, .8);
     height: 5rem;
     z-index: 1;
+    grid-row: 1/2;
 }
 
 nav {
@@ -35,6 +36,7 @@ nav ul {
     color: #FFFFFF;
     font-family: 'Times New Roman', Times, serif;
     font-size: 2rem;
+    flex-wrap: wrap;
 }
 
 body {
@@ -46,6 +48,7 @@ body {
     background: #D3D3D3;
     height: 38rem;
     margin-top: -5rem;
+    grid-row: 2/3;
 }
 
 #console img {
@@ -65,6 +68,7 @@ main {
     /*height: 40rem;/*600px; so each 10px is about .6rem*/
     color: rgb(10, 10, 10);
     font-size: 25px;
+    grid-row: 3/4;
 }
 
 #GameImage {
@@ -94,8 +98,9 @@ main p {
 footer {
     grid-column: 1 / -1;
     background: rgba(6, 6, 6);
-    height: 5rem
-        /*60px; */
+    height: 5rem;
+    grid-row: 4/5;
+    /*60px; */
 }
 
 footer ul {
@@ -160,6 +165,8 @@ footer p {
 }
 
 @media only screen and (max-width:768px) {
+
+    /* Fix menu so that it doesn't get cut off at super small sizes, fix images so that the are above or below p's, fix menu so that no black is in the red */
     #wrapper {
         grid-template-columns: minmax(0px, 0fr) repeat(6, minmax(0, 100%)) minmax(0px, 0fr);
 
@@ -169,7 +176,6 @@ footer p {
         grid-column: 1 / -1;
         background: #D3D3D3;
         height: auto;
-        margin-top: -3rem;
     }
 
     #console img {
@@ -185,6 +191,11 @@ footer p {
     main {
         font-size: larger;
         height: auto;
+
+    }
+
+    body {
+        margin-top: 0px;
     }
 
     nav ul {
@@ -205,5 +216,23 @@ footer p {
 
     footer ul {
         font-size: larger;
+    }
+
+    #GameImage {
+        float: left;
+        width: 20%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 0.3rem;
+        padding: 2rem
+    }
+
+    #TTRPGImage {
+        float: right;
+        width: 40%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 0.3rem;
+        padding: 2rem
     }
 }
