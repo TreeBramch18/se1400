@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Island+Moments&display=swap');
+
+/*Got help with Chat GPT for this*/
+#wrapper {
+    display: grid;
+    grid-template-columns: minmax(0px, 1fr) repeat(6, minmax(0, 175px)) minmax(0px, 1fr);
+
+}
+
+
+header {
+    grid-column: 1 / -1;
+    background: rgba(6, 6, 6, .8);
+    height: 5rem;
+    z-index: 1;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: .6rem 1.2rem;
+}
+
+
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-left: .6rem;
+    width: 150%;
+
+    color: #FFFFFF;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+}
+
+body {
+    background: rgb(122, 2, 2);
+}
+
+#console {
+    grid-column: 1 / -1;
+    background: #D3D3D3;
+    height: 38rem;
+    margin-top: -5rem;
+}
+
+#console img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    padding-left: 24%;
+    opacity: .7;
+}
+
+main {
+    grid-column: 2 / 8;
+    background: #D3D3D3;
+    height: auto;
+    /*height: 40rem;/*600px; so each 10px is about .6rem*/
+    color: rgb(10, 10, 10);
+    font-size: 25px;
+}
+
+#GameImage {
+    float: left;
+    width: 20%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.3rem;
+    padding: 2rem
+}
+
+#TTRPGImage {
+    float: right;
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.3rem;
+    padding: 2rem
+}
+
+main p {
+    text-indent: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+footer {
+    grid-column: 1 / -1;
+    background: rgba(6, 6, 6);
+    height: 5rem
+        /*60px; */
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-right: 3rem;
+
+    color: #D3D3D3;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    align-items: center;
+}
+
+footer p {
+    padding-right: 1rem;
+    float: right;
+    position: relative;
+    bottom: 1.5rem;
+}
+
+.logo {
+    font-size: 3.5rem;
+    font-weight: lighter;
+    font-family: 'Island Moments', cursive;
+    transform: rotate(20deg);
+    color: #FFFFFF;
+    margin: 0;
+}
+
+@media only screen and (max-width:992px) {
+    #wrapper {
+        grid-template-columns: minmax(0px, 1fr) repeat(6, minmax(0, 128px)) minmax(0px, 1fr);
+    }
+
+    #console {
+        grid-column: 1 / -1;
+        background: #D3D3D3;
+        height: 15rem;
+        margin-top: -5rem;
+    }
+
+    #console img {
+        width: 50%;
+        height: 80%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+        padding-left: 24%;
+        opacity: .7;
+    }
+
+    nav ul {
+        font-size: x-large;
+    }
+
+    footer ul {
+        font-size: x-large;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    #wrapper {
+        grid-template-columns: minmax(0px, 0fr) repeat(6, minmax(0, 100%)) minmax(0px, 0fr);
+
+    }
+
+    #console {
+        grid-column: 1 / -1;
+        background: #D3D3D3;
+        height: auto;
+        margin-top: -3rem;
+    }
+
+    #console img {
+        width: 50%;
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+        padding-left: 24%;
+        opacity: .7;
+    }
+
+    main {
+        font-size: larger;
+        height: auto;
+    }
+
+    nav ul {
+        font-size: larger;
+    }
+
+    header {
+        height: auto;
+    }
+
+    .logo {
+        font-size: xx-large;
+    }
+
+    footer {
+        height: auto;
+    }
+
+    footer ul {
+        font-size: larger;
+    }
+}
