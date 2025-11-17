@@ -39,6 +39,15 @@ nav ul {
     flex-wrap: wrap;
 }
 
+nav li::after {
+    content: "|";
+    margin-left: 8px;
+}
+
+nav li:last-child::after {
+    content: "";
+}
+
 body {
     background: rgb(122, 2, 2);
 }
@@ -175,6 +184,7 @@ footer p {
     #console {
         background: #D3D3D3;
         height: auto;
+        margin-top: 0px;
     }
 
     #console img {
@@ -184,7 +194,7 @@ footer p {
         object-position: center;
         display: block;
         padding-left: 24%;
-        opacity: .7;
+        opacity: .0;
     }
 
     main {
@@ -199,14 +209,21 @@ footer p {
 
     nav {
         margin-top: 0%;
+        grid-row: 1/2;
+    }
+
+    nav p {
+        grid-row: 1/2;
     }
 
     nav ul {
         font-size: larger;
+        grid-row: 2/3;
     }
 
     header {
         height: auto;
+        background: rgba(6, 6, 6);
     }
 
     .logo {

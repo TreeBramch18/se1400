@@ -24,7 +24,7 @@ elif(S == 0):
 else:
     for i in range(S):
         if(pow(R,T,N)==M):
-            quickBool == True
+            quickBool = True
             print("Your Number is most likely a Prime")
         elif(i != S):
             T *= 2;
