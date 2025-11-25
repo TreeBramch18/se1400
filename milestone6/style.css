@@ -155,7 +155,6 @@ form {
 
 }
 
-
 .logo {
     font-size: 3.5rem;
     font-weight: lighter;
@@ -172,6 +171,10 @@ form {
 
 a:visited {
     color: #FFFFFF;
+}
+
+p a:visited {
+    color: rgb(122, 2, 2);
 }
 
 #mainImage {
@@ -195,6 +198,35 @@ a {
     color: rgb(122, 2, 2);
     text-decoration: none;
 }
+
+.buy-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;                /* space between button & text */
+    margin: 3rem 0;
+}
+
+.buy-button {
+    padding: 12px 24px;
+    background-color: rgb(122, 2, 2);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.buy-button:hover {
+    background-color: rgb(100, 0, 0);
+}
+
+.buy-text {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: rgb(10, 10, 10);
+}
+
 
 @media only screen and (max-width:992px) {
     #wrapper {
