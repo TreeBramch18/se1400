@@ -177,6 +177,10 @@ p a:visited {
     color: rgb(122, 2, 2);
 }
 
+.logo a:visited {
+    color: #FFFFFF;
+}
+
 #mainImage {
     width: 35rem;
     height: 20rem;
@@ -203,13 +207,15 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;                /* space between button & text */
+    gap: 20px;
+    /* space between button & text */
     margin: 3rem 0;
 }
 
 .buy-button {
     padding: 12px 24px;
     background-color: rgb(122, 2, 2);
+    /*rgb(122, 2, 2)*/
     color: white;
     border: none;
     border-radius: 6px;
