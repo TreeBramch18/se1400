@@ -169,17 +169,19 @@ form {
     color: #FFFFFF;
 }
 
-a:visited {
-    color: #FFFFFF;
-}
+
 
 p a:visited {
     color: rgb(122, 2, 2);
 }
 
-.logo a:visited {
-    color: #FFFFFF;
+nav a,
+nav a:visited,
+nav a:hover,
+nav a:active {
+    color: #FFFFFF !important;
 }
+
 
 #mainImage {
     width: 35rem;
