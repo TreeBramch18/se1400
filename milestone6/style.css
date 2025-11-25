@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Island+Moments&display=swap');
+
+/*Got help with Chat GPT for this*/
+#wrapper {
+    display: grid;
+    grid-template-columns: minmax(0px, 1fr) repeat(6, minmax(0, 175px)) minmax(0px, 1fr);
+
+}
+
+
+header {
+    grid-column: 1 / -1;
+    background: rgba(6, 6, 6, .8);
+    height: 5rem;
+    z-index: 1;
+    grid-row: 1/2;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: .6rem 1.2rem;
+}
+
+
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-left: .6rem;
+    width: 150%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    flex-wrap: wrap;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+nav li::after {
+    content: "|";
+    margin-left: 8px;
+}
+
+nav li:last-child::after {
+    content: "";
+}
+
+body {
+    background: rgb(122, 2, 2);
+}
+
+#console {
+    grid-column: 1 / -1;
+    background: #D3D3D3;
+    height: 38rem;
+    margin-top: -5rem;
+    grid-row: 2/3;
+}
+
+#console img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    padding-left: 24%;
+    opacity: .7;
+}
+
+main {
+    grid-column: 2 / 8;
+    background: #D3D3D3;
+    height: auto;
+    /*height: 40rem;/*600px; so each 10px is about .6rem*/
+    color: rgb(10, 10, 10);
+    font-size: 25px;
+    grid-row: 3/4;
+}
+
+#GameImage {
+    float: left;
+    width: 20%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.3rem;
+    padding: 2rem
+}
+
+#TTRPGImage {
+    float: right;
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.3rem;
+    padding: 2rem
+}
+
+main p {
+    text-indent: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+footer {
+    grid-column: 1 / -1;
+    background: rgba(6, 6, 6);
+    height: 5rem;
+    grid-row: 4/5;
+    /*60px; */
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-right: 3rem;
+
+    color: #D3D3D3;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    align-items: center;
+}
+
+footer p {
+    padding-right: 1rem;
+    float: right;
+    position: relative;
+    bottom: 1.5rem;
+}
+
+form {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    gap: 0.75rem;
+    width: 100%;
+}
+
+#mySubmit {
+    font-size: 1rem;
+    padding: 10px;
+    color: #FFFFFF;
+    background-color: rgb(122, 2, 2);
+    border: none;
+    display: block;
+    margin: 1rem;
+
+}
+
+
+.logo {
+    font-size: 3.5rem;
+    font-weight: lighter;
+    font-family: 'Island Moments', cursive;
+    transform: rotate(20deg);
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+a:visited {
+    color: #FFFFFF;
+}
+
+#mainImage {
+    width: 35rem;
+    height: 20rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+}
+
+.subImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25rem;
+    height: 15rem;
+}
+
+a {
+    color: rgb(122, 2, 2);
+    text-decoration: none;
+}
+
+@media only screen and (max-width:992px) {
+    #wrapper {
+        grid-template-columns: minmax(0px, 1fr) repeat(6, minmax(0, 128px)) minmax(0px, 1fr);
+    }
+
+    #console {
+        grid-column: 1 / -1;
+        background: #D3D3D3;
+        height: 15rem;
+        margin-top: -5rem;
+    }
+
+    #console img {
+        width: 50%;
+        height: 80%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+        padding-left: 24%;
+        opacity: .7;
+    }
+
+    nav ul {
+        font-size: x-large;
+    }
+
+    footer ul {
+        font-size: x-large;
+    }
+}
+
+@media only screen and (max-width:768px) {
+
+    /* Fix menu so that it doesn't get cut off at super small sizes, fix images so that the are above or below p's, fix menu so that no black is in the red */
+    #wrapper {
+        grid-template-columns: minmax(0px, 0fr) repeat(6, minmax(0, 100%)) minmax(0px, 0fr);
+
+    }
+
+    #console {
+        background: #D3D3D3;
+        height: auto;
+        margin-top: 0px;
+    }
+
+    #console img {
+        width: 50%;
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+        padding-left: 24%;
+        opacity: .0;
+    }
+
+    main {
+        font-size: larger;
+        height: auto;
+
+    }
+
+    body {
+        margin-top: 0px;
+    }
+
+    nav {
+        margin-top: 0%;
+        grid-row: 1/2;
+    }
+
+    nav p {
+        grid-row: 1/2;
+    }
+
+    nav ul {
+        font-size: larger;
+        grid-row: 2/3;
+    }
+
+    header {
+        height: auto;
+        background: rgba(6, 6, 6);
+    }
+
+    .logo {
+        font-size: xx-large;
+    }
+
+    footer {
+        height: auto;
+    }
+
+    footer ul {
+        font-size: larger;
+    }
+
+    #GameImage {
+        float: none;
+        width: auto;
+        height: auto;
+        object-fit: cover;
+        border-radius: 3rem;
+        padding-bottom: 2rem;
+
+    }
+
+    #TTRPGImage {
+        float: none;
+        width: auto;
+        height: auto;
+        object-fit: cover;
+        border-radius: 3rem;
+        padding-bottom: 2rem;
+    }
+
+}
+
+@media only screen and (max-width:400px) {
+    #mainImage {
+        display: none;
+    }
+
+    .subImage {
+        display: none;
+    }
+
+    #console {
+        display: none;
+    }
+
+    #GameImage {
+        display: none;
+    }
+
+    #TTRPGImage {
+        display: none;
+    }
+}

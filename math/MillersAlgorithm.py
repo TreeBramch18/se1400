@@ -1,33 +1,44 @@
 import random
 
-N = input("Give me a number, Ill tell you if it's prime \r\n")
-N = int(N)
-M = N-1
+def is_probable_prime(n, k=10):
+    """
+    Miller–Rabin probabilistic primality test.
+    n: number to test
+    k: number of rounds (default: 10)
+    Returns: True if probably prime, False if composite.
+    """
 
-S = 0
-T = M
+    # Handle small or simple cases first
+    if n < 2:
+        return False
+    if n in (2, 3):
+        return True
+    if n % 2 == 0:
+        return False
 
-while T % 2:
-    T //= 2
-    S += 1
+    # Write n-1 as 2^s * d with d odd
+    d = n - 1
+    s = 0
+    while d % 2 == 0:
+        d //= 2
+        s += 1
 
-M = N-1
-T = int(T)
-R = random.randint(2,M-1);
-quickBool = False;
+    # Perform k rounds of testing
+    for _ in range(k):
+        a = random.randrange(2, n - 1)
+        x = pow(a, d, n)
 
-if(pow(R,T,N)==1):
-    print("Your Number is most likely a Prime")
-elif(S == 0):
-    print("Your Number is not prime")
+        if x == 1 or x == n - 1:
+            continue
 
-else:
-    for i in range(S):
-        if(pow(R,T,N)==M):
-            quickBool = True
-            print("Your Number is most likely a Prime")
-        elif(i != S):
-            T *= 2;
+        # Square x repeatedly
+        for _ in range(s - 1):
+            x = pow(x, 2, n)
+            if x == n - 1:
+                break
+        else:
+            # If we did not break, it's composite
+            return False
 
-    if(quickBool == False):
-        print("Your Number is not prime")
+    # Probably prime
+    return True
