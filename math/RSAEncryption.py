@@ -183,7 +183,6 @@ def main():
     strOne = "hellotheremynameismarkiplierandtodaywewillbeplayingfivenightsatfreddysthisgameisamascothorrorgamewithlotsofjumpscareswewillbedefendingourofficefromatoybearatoyhcickenatoybunnyandatoyfox"
     strTwo = "accordingtoallknownlawsofaviationthereisnowayabeeshouldbeabletoflyitswingsaretoosmalltogetitsfatlittlebodyoffthegroundthebeeofcoursefliesanyways"
     RSA.GenerateKeys(strOne, strTwo)
-    RSA.Encrypt("original.txt", "encrypted.txt")
     RSA.Decrypt("encrypted.txt", "decrypted.txt")
 
     print("Decryption complete. Output written to decrypted.txt")
